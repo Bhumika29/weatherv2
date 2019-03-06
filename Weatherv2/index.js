@@ -19,9 +19,9 @@ app.post('/webhook',(req,res) =>{
 	var city=req.body.result.parameters.geoCity;
 	var w=getWeather(city);
 	return res.json({
-    speech: "Delhi",
-    displayText: "Delhi",
-    source: "webhook-echo-sample"
+    speech: city,
+    displayText: city,
+    source: ""
   });
 	
 	
